@@ -1,0 +1,10 @@
+.address-list {
+	@extend %listreset;	
+}
+
+.address-item {
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,63 @@
+.navigation {
+	position: absolute;
+	top: 60px; right: 0;
+	display: none;
+	padding: 15px 20px;
+	background-color: $Primary-text;
+	z-index: 1;
+	@media all and (min-width: map-get($breakpoints, 'desktop')) {
+		position: static;
+		display: inline-block !important;
+		padding: 0;
+	}
+}
+
+.navigation-toggle {
+	@media all and (min-width: map-get($breakpoints, 'desktop')) {
+		display: none;
+	}
+}
+
+.navigation-list {
+	display: inline-block;
+	@extend %listreset;
+}
+
+.navigation-item {
+	display: block;
+	padding: 5px 15px;
+	& > a {
+		display: inline-block;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		&:hover {
+			color: $Second;
+		}
+	}	
+
+	@media all and (min-width: map-get($breakpoints, 'desktop')) {
+		display: inline-block;
+		padding: 0;
+		margin: 0 22.5px;
+		&:first-of-type {margin-left: 0;}
+		&:last-of-type {margin-right: 0;}
+
+		& > a {
+			position: relative;
+			padding: 0 10px;
+			@include rem-font-size(14.4px);
+			&:hover {color: #fff;}
+		}
+
+		& > a:hover:after,
+		&.active > a:after {
+			content: '';
+			position: absolute;
+			bottom: -40px; left: 0;
+			display: inline-block;
+			height: 2px; width: 100%;
+			background-color: $Second;
+		}
+	}
+}

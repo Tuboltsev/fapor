@@ -1,0 +1,63 @@
+#footer {
+	background-color: #2B2F35;
+}
+
+.f-content {
+	padding-top: 79px;
+	padding-bottom: 57px;
+}
+
+.f-column {
+	@media all and (max-width: map-get($breakpoints, 'phone') - 1) {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+.f-title {
+	margin-bottom: 20px;
+	color: $Second;
+	font-weight: 600;
+	@include rem-font-size(14px);
+	text-transform: uppercase;
+}
+
+.f-text {
+	color: $Footer-text;
+	line-height: 1.6;
+	@include rem-font-size(14px);
+}
+
+.f-address {
+	margin-bottom: 24px;
+	color: $Footer-text;
+	font-style: normal;
+	@include rem-font-size(14px);
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.copyright {
+	padding: 15px 0;
+	background-color: $Primary-text;
+	p {
+		width: 100%;
+		padding: 8px 0;
+		margin-bottom: 15px;
+		color: $Footer-text;
+		text-align: center;
+		@include rem-font-size(12px);
+		@media all and (min-width: map-get($breakpoints, 'phone')) {
+			width: auto;
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
+}
+
+.social-list.f-social > .social-item {
+	margin: 0 5.5px;
+	&:first-child {margin-left: 0;}
+	&:last-child {margin-right: 0;}
+}

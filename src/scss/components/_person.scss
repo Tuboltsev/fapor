@@ -1,0 +1,55 @@
+.person {
+	max-width: 225px;
+	margin: 0 0 20px;
+	@media all and (min-width: map-get($breakpoints, 'phone')) {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	@media all and (min-width: map-get($breakpoints, 'tablet')) {
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	@media all and (min-width: map-get($breakpoints, 'maxscreen')) {
+		max-width: 310px;
+	}
+}
+
+.person__pic {
+	height: 220px;
+	margin: 0;
+	overflow: hidden;
+	@media all and (min-width: map-get($breakpoints, 'maxscreen')) {
+		height: 300px;
+	}
+}
+
+.person__content {
+	padding: 10px 7px 0 11px;
+	text-align: center;
+	@media all and (min-width: map-get($breakpoints, 'maxscreen')) {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 25px;
+		text-align: left;
+	}
+}
+
+.person__name {
+	h4 {
+		margin-bottom: 3px;
+		color: #232323;
+		font-weight: 500;
+		@include rem-font-size(16px);
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 0;
+		color: $Second;
+		@include rem-font-size(14px);
+	}
+}
+
+.person__social {
+	margin-top: 5px;
+}

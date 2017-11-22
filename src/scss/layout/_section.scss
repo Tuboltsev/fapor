@@ -1,0 +1,33 @@
+.person-list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0 0 23px;
+	@media all and (min-width: map-get($breakpoints, 'phone')) {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	@media all and (min-width: map-get($breakpoints, 'tablet')) {
+		justify-content: space-between;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+}
+
+#about {
+	padding-top: 100px;
+	margin-bottom: 31px;
+	@media all and (min-width: map-get($breakpoints, 'tablet')) {
+		padding-top: 149px;
+	}
+}
+
+#reviews {
+	padding-top: 114px;
+	padding-bottom: 100px;
+	background-color: #F7F7F7;
+}
+
+.reviews__title {
+	margin-bottom: 64px;
+}

@@ -1,0 +1,20 @@
+.subscribe-form {
+	input {
+		height: 37px; width: 100%;
+		padding: 10px 12px;
+		border: 1px solid $Footer-text;
+		margin-bottom: 12px;
+		background-color: transparent;
+		color: #fff;
+		@include placeholder {
+			color: $Footer-text;
+		}
+	}
+}
+
+.btn-subscribe {
+	height: 37px;
+	width: 100%;
+	background-color: $Second;
+	color: #fff;
+}
